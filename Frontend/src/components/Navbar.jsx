@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthProvider";
 function Navbar() {
   const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
   );
   const element = document.documentElement;
   useEffect(() => {
@@ -101,7 +101,7 @@ function Navbar() {
               <label className=" px-3 py-2 border rounded-md flex items-center gap-2">
                 <input
                   type="text"
-                  className="grow outline-none rounded-md px-1 dark:bg-slate-900 dark:text-white"
+                  className="grow outline-none rounded-md px-1 bg-transparent dark:text-white"
                   placeholder="Search"
                 />
                 <svg
